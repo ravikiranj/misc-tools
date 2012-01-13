@@ -9,7 +9,7 @@
 \documentclass[11pt,a4paper]{moderncv}
 
 % moderncv themes
-\moderncvtheme[orange]{casual}                  % optional argument are 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+\moderncvtheme[blue]{classic}                  % optional argument are 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
 %\moderncvtheme[green]{classic}               % idem
 
 % character encoding
@@ -21,23 +21,15 @@
 %\setlength{\hintscolumnwidth}{3cm}           % if you want to change the width of the column with the dates
 %\setlength{\maketitlenamewidth}{10cm}}       % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
 
+
 % personal data
 \firstname{Ravikiran}
 \familyname{Janardhana}
 \address{1100 W NC HWY 54 BYP, APT 38B}{CHAPEL HILL NC-27516}    % optional, remove the line if not wanted
 \mobile{919-448-8740}                    % optional, remove the line if not wanted
-\email{ravikiran.j.127@gmail.com}                      % optional, remove the line if not wanted
+\email{ravikirn@cs.unc.edu}                      % optional, remove the line if not wanted
 %%\homepage{www.ravikiranj.net}                % optional, remove the line if not wanted
-\photo[64pt]{ravikirn.jpg}                  % '64pt' is the height the picture and 'picture' is the name of the picture file; 
-
-% to show numerical labels in the bibliography; only useful if you make citations in your resume
-\makeatletter
-\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
-\makeatother
-
-% bibliography with mutiple entries
-%\usepackage{multibib}
-%\newcites{book,misc}{{Books},{Others}}
+%\photo[64pt]{ravikirn.jpg}                  % '64pt' is the height the picture and 'picture' is the name of the picture file; 
 
 %\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
 %----------------------------------------------------------------------------------
@@ -45,16 +37,21 @@
 %----------------------------------------------------------------------------------
 \begin{document}
 %\begin{CJK*}{UTF8}{gbsn}                    % to typeset your resume in Chinese using CJK
-\maketitle
+% format name size to adjust for long length and color
+\renewcommand*{\firstnamefont}{\fontsize{30}{26}\sffamily\mdseries\upshape}
+\renewcommand*{\familynamefont}{\firstnamefont}
+\definecolor{familynamecolor}{rgb}{0.65,0.65,0.65}
+\definecolor{firstnamecolor}{rgb}{0.45,0.45,0.45}
 
+\maketitle
 \section{Experience}
 \cventry{2011--present}{Research Assistant}{University of North Carolina at Chapel Hill}{Chapel Hill}{}{
 \begin{itemize}
-\item  Worked on identifying fiber crossings in white matter of the brain under \textit{Dr. Martin Styner}
-\end{itemize}
-}
+\item{Worked on identifying fiber crossings in white matter of the brain under \textit{Dr. Martin Styner}}
+\item{The main goal of my research is to find the fiber crossing landmarks and use it for registration of human brains}
+\end{itemize}}
 
-\vspace{3mm}
+\vspace{1mm}
 
 \cventry{2009--2011}{Software Engineer}{Yahoo! India}{Bangalore}{}{
 \begin{itemize}
@@ -64,16 +61,27 @@
 \item{Demonstrated the quality of a utility player by handling both the frontend as well as the backend tasks which included porting legacy code, improving existing modules and developing new modules}
 \end{itemize}}
 
+\vspace{2mm}
+
+\cventry{2007}{Teaching Assistant}{PES Institute of Technology}{Bangalore}{}{
+\begin{itemize}
+\item{Worked as teaching assistant in the course of \textit{Advanced Microprocessors}}
+\item{Developed assembly programs in Microsoft Assembler (MASM) to demonstrate binary search, bubble sort, string operations and simple calculator and taught the same}
+\end{itemize}}
+
 \section{Education}
-\cventry{2011--present}{MS.}{University of North Carolina at Chapel Hill}{Chapel Hill, NC}{}{Masters in Computer Science }
-\cventry{2005--2009}{BE.}{Peoples Education Society Institute of Technology (PESIT)}{Bangalore, India}{}{Bachelor of Engineering in Computer Science - 88.40\%}
+\cventry{2011--present}{MS.}{University of North Carolina at Chapel Hill}{Chapel Hill, NC}{}{Masters in Computer Science}
+\cventry{2005--2009}{BE.}{Peoples Education Society Institute of Technology (PESIT)}{Bangalore, India}{Bachelor of Engineering in Computer Science}{Percentage: 88.40, \textbf{University Topper}}
 
 \section{Computer skills}
-\cvline{Super}{C/C++, PHP, Javascript}
-\cvline{Good}{Java, Python, Hadoop, Pig}
-\cvline{Passable}{Perl, Shell, HTML5, CSS}
+\cvline{Programming}{C/C++, PHP, Python, Java, Perl}
+\cvline{Web}{HTML5, Javascript, CSS, YUI2/3, jQuery}
+\cvline{Data Mining}{Pig, Hadoop}
+\cvline{Database}{MySQL, Oracle}
 \cvline{Platforms}{Linux, Web}
-\cvline{Concepts}{Computer Vision, Motion Planning for Robots, Digital Image Processing}
+\cvline{Concepts}{Motion Planning for Robots, Computer Vision, Digital Image Processing, Operating Systems, Algorithms and Data Structures}
+
+\vspace{9mm}
 
 \section{Academic Projects}
 \cventry{2011}{Roadmap-based Motion Planning in Dynamic Environments}{}{}{}{
@@ -82,7 +90,7 @@
 \end{itemize}
 }
 
-\vspace{3mm}
+\vspace{2mm}
 
 \cventry{2011}{Identifying fiber crossing landmarks in the white matter of the brain}{}{}{}{
 \begin{itemize}
@@ -91,7 +99,7 @@
 \end{itemize}
 }
 
-\vspace{3mm}
+\vspace{2mm}
 
 \cventry{2009}{Track Me - A suite of innovative user interfaces}{}{}{}{
 \begin{itemize}
@@ -106,24 +114,24 @@
 \end{itemize}
 }
 
-\vspace{3mm}
+\vspace{2mm}
 
 \cventry{2008 -- 2009}{American Sign Language Interpreter}{}{}{}{
 \begin{itemize}
 \item {Developed a real-time interpreter of American Sign Language alphabets which converts hand gestures into text, which is further read out by a speech engine}
-\item {This project resulted in a research paper[1] which was presented at \textit{International MultiConference of Engineers and Computer Scientists 2009, Hong Kong}}
-\item {An extension of this work appeared as a book chapter[2] in \textit{Intelligent Automation and Computer Engineering}, Springer, 321-332, 2010}
+\item {This project resulted in a research paper [1] which was presented at \textit{International MultiConference of Engineers and Computer Scientists 2009, Hong Kong}}
+\item {An extension of this work appeared as a book chapter [2] in \textit{Intelligent Automation and Computer Engineering}, Springer, 321-332, 2010}
 \end{itemize}
 }
 
 \section{Awards and Achievements}
 \cventry{Mar 2011}{Promoted}{Yahoo! India}{Bangalore, India}{}{Promoted to Senior Software Engineer}
-\cventry{Jan 2010}{University Gold Medal}{Visvesvaraya Technological University}{PESIT}{Belgaum, India}{Received Gold Medal for being the University topper in Bachelor of Engineering (B.E) in Computer Science (2005-09) }
-\cventry{Jul 2009}{Certificate of Merit}{International MultiConference of Engineers and Computer Scientists 2009}{Hong Kong}{}{Received Certificate of Merit for the conference paper \textit{Finger Detection for Sign Language Recognition} presented at IMECS 2009, Hong Kong}
+\cventry{Jan 2010}{University Gold Medal}{Visvesvaraya Technological University}{PESIT}{Belgaum, India}{Awarded Gold Medal for being the University topper in Bachelor of Engineering (B.E) in Computer Science (2005-09) }
+\cventry{Jul 2009}{Certificate of Merit}{International MultiConference of Engineers and Computer Scientists 2009}{Hong Kong}{}{Awarded Certificate of Merit for the conference paper \textit{Finger Detection for Sign Language Recognition} presented at IMECS 2009, Hong Kong}
 
 \section{Interests}
 \cvline{Software}{Linux and Open Source}
-\cvline{Web}{HTML5}
+\cvline{Web/Mobile}{HTML5, Android and iOS App Development}
 \cvline{Sports}{Football, Cricket, Basketball}
 \cvline{Entertainment}{Classical/Electric Guitar, Keyboard, Computer Games and Table Tennis}
 
@@ -134,6 +142,5 @@
 
 %\clearpage\end{CJK*}                        % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
 \end{document}
-
 
 %% end of file `template_en.tex'.
