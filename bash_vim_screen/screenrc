@@ -1,0 +1,23 @@
+# fix scrollback in putty                                                                                                                                   
+termcapinfo xterm* ti@:te@
+startup_message off     
+vbell off              
+autodetach on         
+altscreen on         
+shelltitle "bash"  
+defscrollback 10000
+defutf8 on
+nonblock on
+hardstatus alwayslastline
+hardstatus string '%{= kw}[ %{= kb}%H%{= kw} ][%= %{= kw}%?%-Lw%?%{= kW}%n*%f %t%?%?%{= kw}%?%+Lw%?%?%= ][ %{r}%l%{w} ]%{w}[%{r} %d/%m/%y %C %A %{w}]%{w}'
+
+# syntax: screen -t label order command
+screen -t work1 0 
+screen -t work2 1 
+screen -t work3 2
+screen -t work4 3
+
+# key bindings
+# Bind F11 and F12 to prev, next screen
+bindkey -k F1 prev
+bindkey -k F2 next

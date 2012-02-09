@@ -1,0 +1,42 @@
+filetype plugin indent on	" use filetype on 
+syntax on	" use syntax on 
+set showcmd	" show possible command suggestions 
+set nocompatible	" use vim defaults 
+set ls=2	" allways show status line 
+set tabstop=4	" numbers of spaces of tab character 
+set expandtab	" convert tabs to spaces
+set shiftwidth=4	" numbers of spaces to autoindent
+set scrolloff=3	" keep 3 lines when scrolling
+set showcmd	" display incomplete commands
+set hlsearch	" highlight searches
+set incsearch	" do incremental searching
+set ruler	" show the cursor position all the time
+set visualbell t_vb=	" turn off error beep/flash
+set novisualbell	" turn off visual bell
+set nobackup	" do not keep a backup file
+set number	" show line numbers
+set ignorecase	" ignore case when searching
+set title	" show title in console title bar
+set ttyfast	" smoother changes
+set modeline	" last lines in document sets vim mode
+set modelines=3	" number lines checked for modelines
+set shortmess=atI	" Abbreviate messages
+set nostartofline	" dont jump to first character when paging
+set whichwrap=b,s,h,l,<,>,[,]	" move freely between files
+set autoindent	" always set autoindenting on
+set smartindent	" smart indent
+set nocindent 
+set pastetoggle=<F2>
+set showmode
+set term=xterm
+
+" Press F4 to toggle highlighting on/off.
+:noremap <F4> :noh<CR>
+" Press F2 to save a file opened in RO mode
+:noremap <F2> :w ! sudo tee %<CR>
+" Press Ctrl+Left , Ctrl+Right to switch tabs
+nnoremap <F3> :set invpaste paste?<CR>
+
+"Switching between tabs
+:map <C-Left> :tabp<CR>
+:map <C-Right> :tabn<CR>
