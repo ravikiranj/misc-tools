@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+<html lang="en">
+  <head> 
+    <!-- Original hack from Alex Giron, borrowed the idea from him -->
+    <title>My Valentine Hack</title> 
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+    <meta name="description" content="" /> 
+    <meta name="keywords" content="" /> 
+    <meta name="author" content="Ravikiran Janardhana" /> 
+    <link rel="stylesheet" type="text/css" media="screen,projection" href="styles.css" />
+    
+    <script type="text/javascript" src="http://use.typekit.com/atk2dqn.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <script src="http://www.google.com/jsapi"></script>
+    <script>
+      // Load jQuery
+      google.load("jquery", "1");
+    </script>
+    <script type="text/javascript" charset="utf-8">
+      $(function(){
+        $('ul#descriptions h2').hover(function(){
+          $('ul.solarsystem li.' + $(this).attr('id') ).toggleClass('active');
+          
+        })
+      });
+    </script>
+  </head> 
+  
+  <body>
+  <div id="bd" class="wrap clearfix">
+    <section>
+        <header class="clearfix">
+            <h1>Boy Impress Girl</h1>
+            <p class="disclaimer">Animation properties currently only work on -webkit browsers (FF 9.0+ or Chrome or Safari).</p>
+        </header>
+    </section>
+    <section class="clearfix">
+        <ul class="solarsystem">
+          <li class="sun"><a href="#sun"><span>Girl</span></a></li>
+          <li class="saturn"><a href="#saturn"><span>Boy<span class="ring">Ring</span></span></a></li>
+          <!-- 
+          <li class="mercury"><a href="#mercury"><span>Boy</span></a></li>
+          <li class="venus"><a href="#venus"><span>Venus</span></a></li>
+          <li class="earth"><a href="#earth"><span>Earth<span class="moon"> &amp; Moon</span></span></a></li>
+          <li class="mars"><a href="#mars"><span>Mars</span></a></li>
+          -->
+        </ul>
+    </section>
+  </div>
+  </body>
+</html
