@@ -302,7 +302,8 @@ ul.solarsystem li.earth span {
     -moz-animation-name:moon;
 }
 ul.solarsystem li.mercury {-webkit-animation-duration:5s; -moz-animation-duration:5s;}
-ul.solarsystem #mercury-slow {-webkit-animation-duration:15s; -moz-animation-duration:15s;}
+ul.solarsystem #mercury-slow {-webkit-animation-duration:20s; -moz-animation-duration:20s;}
+ul.solarsystem #mercury-normal {-webkit-animation-duration:10s; -moz-animation-duration:10s;}
 ul.solarsystem li.venus {-webkit-animation-duration:8s; -moz-animation-duration:8s;}
 ul.solarsystem li.earth {-webkit-animation-duration:12s; -moz-animation-duration:12s;}
 ul.solarsystem li.earth span {-webkit-animation-duration:2s; -moz-animation-duration:2s;}

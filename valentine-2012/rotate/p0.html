@@ -8,7 +8,30 @@
     <meta name="keywords" content="" /> 
     <meta name="author" content="Ravikiran Janardhana" /> 
     <link rel="stylesheet" type="text/css" media="screen,projection" href="styles.css" />
-    
+    <style type="text/css">
+        ul.solarsystem li.mercury span {
+            background: #E0AE6F;
+            top: 75px;
+            left: 10px;
+            text-align: center;
+            width: 28px;
+            height: 28px;
+            border-radius: 28px;
+            -webkit-border-radius: 28px;
+            -moz-border-radius: 28px;
+            color: maroon;
+        }
+        ul.solarsystem li.mercury {
+            width: 350px;
+            height: 350px;
+            -webkit-border-radius: 200px;
+            -moz-border-radius: 200px;
+            border-radius: 200px;
+            top: 59px;
+            left: 172px;
+            z-index: 99;
+        }
+    </style>
     <script type="text/javascript" src="http://use.typekit.com/atk2dqn.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <script src="http://www.google.com/jsapi"></script>
@@ -30,14 +53,14 @@
   <div id="bd" class="wrap clearfix">
     <section>
         <header class="clearfix">
-            <h1>Girl loves Boy</h1>
+            <h1>Boy meets Girl</h1>
             <p class="disclaimer">Animation properties currently only work on -webkit browsers (FF 9.0+ or Chrome or Safari).</p>
         </header>
     </section>
     <section class="clearfix">
         <ul class="solarsystem">
-          <li class="sun"><a href="#sun"><span>Boy</span></a></li>
-          <li class="mercury"><a href="#mercury"><span>Girl</span></a></li>
+          <li class="sun"><a href="#sun"><span>Girl</span></a></li>
+          <li id="mercury-normal" class="mercury"><a href="#mercury"><span>Boy</span></a></li>
           <!-- 
           <li class="venus"><a href="#venus"><span>Venus</span></a></li>
           <li class="earth"><a href="#earth"><span>Earth<span class="moon"> &amp; Moon</span></span></a></li>
