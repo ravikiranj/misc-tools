@@ -8,9 +8,9 @@
                             'http://feeds.feedburner.com/bargainist',
                             'http://www.deals2buy.com/rssgen/alldeals.xml',
                             'http://www.dealsofamerica.com/arss.xml',
-                            'http://www.dealsofamerica.com/arss.xml',
-                            'http://www.dealsofamerica.com/arss.xml',
-                            'http://www.dealsofamerica.com/arss.xml');
+                            'http://feeds.dealtaker.com/feed_engine/feed-deals.xml',
+                            'http://rss.dealcatcher.com/rss.xml',
+                            'http://www.techbargains.com/rss.xml');
 
         //Add quotes to start and end of url
         for($i = 0; $i < sizeof($url_list); $i++){
