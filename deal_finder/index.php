@@ -97,11 +97,15 @@ HTML;
                     $link = $results[$i]['link']['content'];
                 }
                 $full_title = isset($results[$i]['title']) ? $results[$i]['title'] : "No title found";
+                //Encode special characters
+                $full_title = htmlspecialchars($full_title);
                 $title = $full_title;
                 if(strlen($title) > $titleMaxLen){
                     $title = substr($full_title, 0, $titleMaxLen-4) . "...";
                 }
                 $desc = isset($results[$i]['description']) ? $results[$i]['description'] : "";
+                //Remove links in description
+                $desc = preg_replace('/<a[^>]*>(.*)<\/a>/iU','', $desc);
                 if(strlen($desc) > $descMaxLen){
                     $desc = substr($desc, 0, $descMaxLen-4) . "...";
                 }
@@ -114,7 +118,7 @@ HTML;
                 }
                 $html .= <<<HTML
 <li class="result">
-    <div class="title"><a href="$link" title="{$full_title}" target="_blank">$title</a><span class="timestamp"> $articleAgeString</span></div>
+    <div class="title"><a href="{$link}" title="{$full_title}" target="_blank">$title</a><span class="timestamp"> $articleAgeString</span></div>
     <div class="description"><p>$desc</p></div>
 </li>    
 HTML;
@@ -122,7 +126,7 @@ HTML;
         }else{
             $html .= "<div class='nofound'>No results found for '$keyword'</div>";
         }
-        $html .= "</ul></div></div></body></html>";
+        $html .= "</ul></div></div><div id='ft'>Copyright © 2012 - Ravikiran Janardhana</div></body></html>";
         return $html;
     }
 
@@ -143,6 +147,7 @@ HTML;
         </form>
         </div>
     </div>
+    <div id='ft'>Copyright © 2012 - Ravikiran Janardhana</div>
 </body>
 </html>
 HTML;

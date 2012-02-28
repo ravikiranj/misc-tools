@@ -20,11 +20,18 @@ body {
     -moz-border-radius: 8px; /* FF1-3.6 */
     border-radius: 8px; /* Opera 10.5, IE9, Saf5, Chrome, FF4, iOS 4, Android 2.1+ */
     margin-top: 25px;
+    margin-bottom: 25px;
     padding-bottom: 25px;
 }
 #bd {
     width: 740px;
     margin-top: -10px;
+}
+#ft {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 91%;
 }
 
 li {
