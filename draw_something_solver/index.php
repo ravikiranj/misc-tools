@@ -108,7 +108,11 @@ HTML;
         if(!$first){
             if(count($success) > 0){
                 $resCount = count($success);
-                $html .= "<div id='results'><div style='padding-left:10px;margin-bottom:-10px;'>{$resCount} words found</div><ol id='result-list'>";
+                $resText = "word";
+                if($resCount > 1){
+                    $resText .= "s";
+                }
+                $html .= "<div id='results'><div style='padding-left:10px;margin-bottom:-10px;'>{$resCount} {$resText} found</div><ol id='result-list'>";
                 for($i = 0; $i < $resCount; $i++){
                     $html .= "<li>{$success[$i]} </li>";
                 }
