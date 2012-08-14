@@ -7,9 +7,9 @@ preHTML = '''
 <!DOCTYPE HTML>
 <html>
 <head>
-  <title>UNC New South Asian International Grad Student Guide</title>
-  <meta name="description" content="website description" />
-  <meta name="keywords" content="website keywords, website keywords" />
+  <title>UNC New International Grad Student Unofficial Guide</title>
+  <meta name="description" content="UNC New International Grad Student Unofficial Guide. This is mostly targeted at South Asian Students coming from India, Pakistan, Bangladesh, Afghanistan, Bhutan, Maldives, Nepal and Srilanka" />
+  <meta name="keywords" content="indian graduate student association unc, help indian grad student unc, unc indian, unc indian student" />
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
   <!-- modernizr enables HTML5 elements and feature detects -->
@@ -19,7 +19,7 @@ preHTML = '''
 <body>
   <div id="main">
     <header>
-          <h2>UNC New International Grad Student Guide</h2>
+        <h2>UNC New International Grad Student Unofficial Guide</h2>
     </header>
     <div id="site_content">
       <div id="sidebar_container">
@@ -32,22 +32,24 @@ preHTML = '''
                     <li id="airport-pickup"><a href="airport-pickup.html">Airport Pickup</a></li>
                     <li id="post-arrival"><a href="post-arrival.html">Post-Arrival</a></li>
                     <li id="housing"><a href="housing.html">Housing</a></li>
-                    <li style="padding-bottom: 0px;"><a href="#">Campus Life</a>
+                    <li id="campus-life" style="padding-bottom: 0px;"><a href="campus-life.html">Campus Life</a>
                         <ul style="margin: 0px;">
-                            <li id="food"><a href="food.html">Food</a></li>
+                            <li id="food" style="margin-top: 5px;"><a href="food.html">Food</a></li>
                             <li id="shopping"><a href="shopping.html">Shopping</a></li>
-                            <li id="entertainment"><a href="entertainment.html">Sports & Entertainment</a></li>
+                            <li id="sports"><a href="sports.html">Sports</a></li>
+                            <li id="transportation"><a href="transportation.html">Transportation</a></li>
+                            <li id="music"><a href="music.html">Music</a></li>
                         </ul>
                     </li>
-                    <li style="padding-bottom: 0px;"><a href="#">Academics</a>
+                    <li id="academics" style="padding-bottom: 0px;"><a href="academics.html">Academics</a>
                         <ul style="margin: 0px;">
-                            <li id="books"><a href="books.html">Books</a></li>
+                            <li id="books" style="margin-top: 5px;"><a href="books.html">Books</a></li>
                             <li id="courses"><a href="courses.html">Courses</a></li>
                         </ul>
                    </li>
-                    <li style="padding-bottom: 0px;"><a href="#">Finance</a>
+                    <li id="finance" style="padding-bottom: 0px;"><a href="finance.html">Finance</a>
                         <ul style="margin: 0px;">
-                            <li id="tuition"><a href="tuition.html">Tuition Fees Payment</a></li>
+                            <li id="tuition" style="margin-top: 5px;"><a href="tuition.html">Tuition Fees Payment</a></li>
                             <li id="lifestyle"><a href="lifestyle.html">Lifestyle</a></li>
                         </ul>
                     </li>
@@ -86,7 +88,9 @@ window.onload = init;
 class Intro(webapp.RequestHandler):
     def get(self):
         self.response.headers['Content-Type'] = 'text/html'
-        html = preHTML % (('Intro', ''))
+        markup = ''
+        markup = open('../assets/data/intro.html', 'r').read()
+        html = preHTML % ((markup, ''))
         self.response.out.write(html)
 
 class Packing(webapp.RequestHandler):
@@ -113,8 +117,10 @@ class AirportPickup(webapp.RequestHandler):
 class PostArrival(webapp.RequestHandler):
     def get(self):
         self.response.headers['Content-Type'] = 'text/html'
+        markup = ''
+        markup = open('../assets/data/post-arrival.html', 'r').read()
         addJS = script % (('post-arrival'))
-        html = preHTML % (('Post-Arrival', addJS))
+        html = preHTML % ((markup, addJS))
         self.response.out.write(html)
         
 class Housing(webapp.RequestHandler):
@@ -124,27 +130,67 @@ class Housing(webapp.RequestHandler):
         html = preHTML % (('Housing', addJS))
         self.response.out.write(html)
 
+class CampusLife(webapp.RequestHandler):
+    def get(self):
+        self.response.headers['Content-Type'] = 'text/html'
+        markup = ''
+        markup = open('../assets/data/campus-life.html', 'r').read()
+        addJS = script % (('campus-life'))
+        html = preHTML % ((markup, addJS))
+        self.response.out.write(html)
+
 class Food(webapp.RequestHandler):
     def get(self):
         self.response.headers['Content-Type'] = 'text/html'
+        markup = ''
+        markup = open('../assets/data/food.html', 'r').read()
         addJS = script % (('food'))
-        html = preHTML % (('Food', addJS))
+        html = preHTML % ((markup, addJS))
         self.response.out.write(html)
 
 class Shopping(webapp.RequestHandler):
     def get(self):
         self.response.headers['Content-Type'] = 'text/html'
+        markup = ''
+        markup = open('../assets/data/shopping.html', 'r').read()
         addJS = script % (('shopping'))
-        html = preHTML % (('Shopping', addJS))
+        html = preHTML % ((markup, addJS))
         self.response.out.write(html)
 
-class Entertainment(webapp.RequestHandler):
+class Sports(webapp.RequestHandler):
     def get(self):
         self.response.headers['Content-Type'] = 'text/html'
-        addJS = script % (('entertainment'))
-        html = preHTML % (('Entertainment', addJS))
+        markup = ''
+        markup = open('../assets/data/sports.html', 'r').read()
+        addJS = script % (('sports'))
+        html = preHTML % ((markup, addJS))
         self.response.out.write(html)
         
+class Transportation(webapp.RequestHandler):
+    def get(self):
+        self.response.headers['Content-Type'] = 'text/html'
+        markup = ''
+        markup = open('../assets/data/transportation.html', 'r').read()
+        addJS = script % (('transportation'))
+        html = preHTML % ((markup, addJS))
+        self.response.out.write(html)
+
+class Music(webapp.RequestHandler):
+    def get(self):
+        self.response.headers['Content-Type'] = 'text/html'
+        markup = ''
+        markup = open('../assets/data/music.html', 'r').read()
+        addJS = script % (('music'))
+        html = preHTML % ((markup, addJS))
+        self.response.out.write(html)
+        
+class Academics(webapp.RequestHandler):
+    def get(self):
+        self.response.headers['Content-Type'] = 'text/html'
+        addJS = script % (('academics'))
+        html = preHTML % (('Academics', addJS))
+        self.response.out.write(html)
+
 class Books(webapp.RequestHandler):
     def get(self):
         self.response.headers['Content-Type'] = 'text/html'
@@ -159,6 +205,13 @@ class Courses(webapp.RequestHandler):
         html = preHTML % (('Courses', addJS))
         self.response.out.write(html)
 
+class Finance(webapp.RequestHandler):
+    def get(self):
+        self.response.headers['Content-Type'] = 'text/html'
+        addJS = script % (('finance'))
+        html = preHTML % (('Finance', addJS))
+        self.response.out.write(html)
+
 class Tuition(webapp.RequestHandler):
     def get(self):
         self.response.headers['Content-Type'] = 'text/html'
@@ -169,8 +222,10 @@ class Tuition(webapp.RequestHandler):
 class Lifestyle(webapp.RequestHandler):
     def get(self):
         self.response.headers['Content-Type'] = 'text/html'
+        markup = ''
+        markup = open('../assets/data/lifestyle.html', 'r').read()
         addJS = script % (('lifestyle'))
-        html = preHTML % (('Lifestyle', addJS))
+        html = preHTML % ((markup, addJS))
         self.response.out.write(html)
 
 class FAQ(webapp.RequestHandler):
@@ -186,11 +241,16 @@ application = webapp.WSGIApplication([('/', Intro),
                                       ('/airport-pickup.html', AirportPickup),
                                       ('/post-arrival.html', PostArrival),
                                       ('/housing.html', Housing),
+                                      ('/campus-life.html', CampusLife),
                                       ('/food.html', Food),
                                       ('/shopping.html', Shopping),
-                                      ('/entertainment.html', Entertainment),
+                                      ('/sports.html', Sports),
+                                      ('/transportation.html', Transportation),
+                                      ('/music.html', Music),
+                                      ('/academics.html', Academics),
                                       ('/books.html', Books),
                                       ('/courses.html', Courses),
+                                      ('/finance.html', Finance),
                                       ('/tuition.html', Tuition),
                                       ('/lifestyle.html', Lifestyle),
                                       ('/faq.html', FAQ),

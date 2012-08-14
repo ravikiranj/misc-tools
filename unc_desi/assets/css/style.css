@@ -64,7 +64,7 @@ h5, h6 {
 
 a { 
   outline: none;
-  text-decoration: underline;
+  text-decoration: none;
   color: #0066CC;
 }
 
@@ -214,11 +214,10 @@ nav {
 }
   
 .sidebar h3, .content h1 { 
-  padding: 0 15px 20px 0;
+  padding: 0 15px 10px 0;
   font: 200% arial, sans-serif;
-  text-shadow:  #000 1px 1px;
   margin: 0 1px;
-  color: #FFF;
+  color: #0066CC;
 }
 
 .sidebar h3 { 
@@ -261,7 +260,7 @@ nav {
   padding: 10px;
   border-radius: 10px;
   -webkit-border-radius: 10px;
-  min-height: 590px;
+  min-height: 635px;
 }
   
 .content ul { 
@@ -516,7 +515,28 @@ ul#nav li a {
   text-decoration: none;
   margin-right: 2px;
 }
-#main-nav li.active a{
+#restaurant-list > li{
+    list-style-type: disc;
+    margin-left: 50px;
+}
+#restaurant-list > li p{
+    padding: 0 0 5px;
+}
+#restaurant-list > li ul > li{
+    list-style-type: circle;
+    margin-left: 20px;
+}
+#restaurant-list > li ul > li span.arrow{
+    color: green;
+    font-size: 110%;
+}
+#list-to-remember li{
+    padding: 0 0 4px 10px;
+    margin: 0 0 0 20px;
+    list-style-type: disc;
+}
+
+#main-nav li.active > a{
     color: #DD4B39;
 }
 ul#nav li a:hover,ul#nav li a:focus { 
