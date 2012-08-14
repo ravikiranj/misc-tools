@@ -12,10 +12,7 @@ preHTML = '''
   <meta name="keywords" content="indian graduate student association unc, help indian grad student unc, unc indian, unc indian student" />
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-  <!-- modernizr enables HTML5 elements and feature detects -->
-  <script type="text/javascript" src="assets/js/modernizr-1.5.min.js"></script>
 </head>
-
 <body>
   <div id="main">
     <header>
@@ -60,7 +57,8 @@ preHTML = '''
       </div>
       </hr>
       <div class="content">
-      %s <!-- Content --> 
+      <!-- Content -->
+      %s 
       </div>
     </div>
     <footer>
@@ -68,21 +66,24 @@ preHTML = '''
   </div>
   <!-- javascript at the bottom for fast page loading -->
   <script type="text/javascript" src="assets/js/jquery-1.8.0.min.js"></script>
-  %s <!-- JS -->
+  <!-- modernizr enables HTML5 elements and feature detects -->
+  <script type="text/javascript" src="assets/js/modernizr-1.5.min.js"></script>
+  <!-- Custom JS -->
+  %s 
 </body>
 </html>
 '''
 #script
 script = '''
-<script type="text/javascript">
-function init(){
-    var prevId = document.getElementsByClassName('active')[0];
-    prevId.className = '';
-    var currId = document.getElementById("%s");
-    currId.className = 'active';
-}
-window.onload = init;
-</script>
+  <script type="text/javascript">
+  function init(){
+      var prevId = document.getElementsByClassName('active')[0];
+      prevId.className = '';
+      var currId = document.getElementById("%s");
+      currId.className = 'active';
+  }
+  window.onload = init;
+  </script>
 '''
 
 class Intro(webapp.RequestHandler):
