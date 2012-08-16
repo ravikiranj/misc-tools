@@ -97,15 +97,19 @@ class Intro(webapp.RequestHandler):
 class Packing(webapp.RequestHandler):
     def get(self):
         self.response.headers['Content-Type'] = 'text/html'
+        markup = ''
+        markup = open('../assets/data/packing.html', 'r').read()
         addJS = script % (('packing'))
-        html = preHTML % (('Packing', addJS))
+        html = preHTML % ((markup, addJS))
         self.response.out.write(html)
 
 class PreArrival(webapp.RequestHandler):
     def get(self):
         self.response.headers['Content-Type'] = 'text/html'
+        markup = ''
+        markup = open('../assets/data/preArrival.html', 'r').read()
         addJS = script % (('pre-arrival'))
-        html = preHTML % (('Pre-Arrival', addJS))
+        html = preHTML % ((markup, addJS))
         self.response.out.write(html)
 
 class AirportPickup(webapp.RequestHandler):
@@ -216,8 +220,10 @@ class Finance(webapp.RequestHandler):
 class Tuition(webapp.RequestHandler):
     def get(self):
         self.response.headers['Content-Type'] = 'text/html'
+        markup = ''
+        markup = open('../assets/data/tuition.html', 'r').read()
         addJS = script % (('tuition'))
-        html = preHTML % (('Tuition', addJS))
+        html = preHTML % ((markup, addJS))
         self.response.out.write(html)
 
 class Lifestyle(webapp.RequestHandler):
@@ -232,8 +238,10 @@ class Lifestyle(webapp.RequestHandler):
 class FAQ(webapp.RequestHandler):
     def get(self):
         self.response.headers['Content-Type'] = 'text/html'
+        markup = ''
+        markup = open('../assets/data/faq.html', 'r').read()
         addJS = script % (('faq'))
-        html = preHTML % (('FAQ', addJS))
+        html = preHTML % ((markup, addJS))
         self.response.out.write(html)
     
 application = webapp.WSGIApplication([('/', Intro),

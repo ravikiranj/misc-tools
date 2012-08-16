@@ -47,6 +47,7 @@ h2 {
 h3 { 
   font-size: 140%;
   padding: 5px 0 0 0;
+  color: #F67F00;
 }
 
 h4, h6 { 
@@ -136,42 +137,6 @@ header {
   background: transparent;
 }
 
-#logo { 
-  width: 330px;
-  float: left;
-  height: 100px;
-  color: #888;
-  padding: 20px;
-  margin-bottom: 20px;
-}
-
-#logo h1, #logo h2 { 
-  font: normal 320% arial, sans-serif;
-  border-bottom: 0;
-  text-transform: none;
-  margin: 0;
-}
-
-#logo_text h1, #logo_text h1 a, #logo_text h1 a:hover { 
-  padding: 0;
-  color: #FFF;
-  text-decoration: none;
-}
-
-#logo_text h1 a .logo_colour { 
-  color: #09D4FF;
-}
-
-#logo_text a:hover .logo_colour { 
-  color: #FFF;
-}
-
-#logo_text h2 { 
-  font-size: 140%;
-  padding: 0 0 0 0;
-  color: #FFF;
-}
-
 nav { 
   float: left;
   height: 44px;
@@ -251,13 +216,13 @@ nav {
 }
 
 .content { 
-  text-align: left;
-  width: 650px;
+  text-align: justify;
+  width: 640px;
   margin: 23px 10px 15px 0;
   float: left;
   font-size: 120%;
   border: 1px solid #C0C0C0;
-  padding: 10px;
+  padding: 15px;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   min-height: 635px;
@@ -408,94 +373,7 @@ Author: Jurriaan Roelofs
 **/
 
 /* Configuration of menu width */
-html body ul.sf-menu ul,html body ul.sf-menu ul li { 
-  width: 200px;
-}
 
-html body ul.sf-menu ul ul { 
-  margin: 0 0 0 200px;
-}
-
-/* Framework for proper showing/hiding/positioning */
-ul.sf-menu,ul.sf-menu * { 
-  margin: 0;
-  padding: 0;
-}
-
-ul.sf-menu { 
-  display: block;
-  position: relative;
-}
-  
-ul.sf-menu li { 
-  display: block;
-  list-style: none;
-  float: left;
-  position: relative;
-}
-  
-ul.sf-menu li:hover { 
-  visibility: inherit; /* fixes IE7 'sticky bug' */ 
-}
-
-ul.sf-menu a { 
-  display: block;
-  position: relative;
-}
-  
-ul.sf-menu ul { 
-  position: absolute;
-  left: 0;
-  width: 150px; 
-  top: auto;
-  left: -999999px;
-}
-  
-ul.sf-menu ul a { 
-  zoom: 1; /* IE6/7 fix */ 
-}
-
-ul.sf-menu ul li { 
-  float: left; /* Must always be floated otherwise there will be a rogue 1px margin-bottom in IE6/7 */
-  width: 150px;
-}
-  
-ul.sf-menu ul ul { 
-  top: 0;
-  margin: 0 0 0 150px;
-}
-
-ul.sf-menu li:hover ul,ul.sf-menu li:focus ul,ul.sf-menu li.sf-hover ul, 
-ul.sf-menu ul li:hover ul,ul.sf-menu ul li:focus ul,ul.sf-menu ul li.sf-hover ul,
-ul.sf-menu ul ul li:hover ul,ul.sf-menu ul ul li:focus ul,ul.sf-menu ul ul li.sf-hover ul,
-ul.sf-menu ul ul ul li:hover ul,ul.sf-menu ul ul ul li:focus ul,ul.sf-menu ul ul ul li.sf-hover ul { 
-  left: auto;
-}
-  
-ul.sf-menu li:hover ul ul,ul.sf-menu li:focus ul ul,ul.sf-menu li.sf-hover ul ul,
-ul.sf-menu ul li:hover ul ul,ul.sf-menu ul li:focus ul ul,ul.sf-menu ul li.sf-hover ul ul,
-ul.sf-menu ul ul li:hover ul ul,ul.sf-menu ul ul li:focus ul ul,ul.sf-menu ul ul li.sf-hover ul ul,
-ul.sf-menu ul ul ul li:hover ul ul,ul.sf-menu ul ul ul li:focus ul ul,ul.sf-menu ul ul ul li.sf-hover ul ul { 
-  left: -999999px;
-}
-
-/* autoArrows CSS */
-span.sf-arrow { 
-  width: 7px;
-  height: 7px;
-  position: absolute;
-  top: 20px;
-  right: 5px;
-  display: block;
-  overflow: hidden; /* making sure IE6 doesn't overflow and expand the box */
-  font-size: 1px;
-}
-
-ul ul span.sf-arrow { 
-  right: 10;
-  top: 20px;
-  background-position: 0 100%;
-}
 
 /* Theming the menu */
 ul#nav { 
@@ -535,14 +413,32 @@ ul#nav li a {
     margin: 0 0 0 20px;
     list-style-type: disc;
 }
-
 #main-nav li.active > a{
     color: #DD4B39;
 }
 ul#nav li a:hover,ul#nav li a:focus { 
   text-shadow: none;
 }
-
 ul#nav ul li a:hover,ul#nav ul li a:focus { 
   text-shadow: none;
+}
+ul.packlist > li{
+    list-style-type: decimal;
+    margin-left: 40px;
+    padding-left: 10px;
+}
+ul.notelist > li{
+    list-style-type: disc;
+    margin-left: 40px;
+    padding-left: 10px;
+}
+.font-bold{
+    font-weight: bold;
+}
+.question{
+    font-weight: bold;
+    padding: 10px 10px 0px 10px;
+}
+.answer{
+    padding: 10px 10px 15px 10px;
 }
