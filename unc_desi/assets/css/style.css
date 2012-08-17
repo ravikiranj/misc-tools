@@ -178,7 +178,14 @@ nav {
 
 }
   
-.sidebar h3, .content h1 { 
+.sidebar h3, .content h1, header h1 { 
+  padding: 0 15px 10px 0;
+  font: 175% arial, sans-serif;
+  margin: 0 1px;
+  color: #0066CC;
+}
+
+header h1{
   padding: 0 15px 10px 0;
   font: 200% arial, sans-serif;
   margin: 0 1px;
@@ -441,4 +448,12 @@ ul.notelist > li{
 }
 .answer{
     padding: 10px 10px 15px 10px;
+}
+/*Logo*/
+#logo{
+    float: left;
+    margin-right: 25px;
+}
+#heading{
+    padding-top: 20px;
 }

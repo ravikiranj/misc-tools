@@ -16,7 +16,8 @@ preHTML = '''
 <body>
   <div id="main">
     <header>
-        <h2>UNC New International Grad Student Unofficial Guide</h2>
+        <div id="logo"><img src="assets/images/logo_unc_main_png.png"/></div>
+        <h1 id="heading">UNC New International Grad Student Unofficial Guide</h1>
     </header>
     <div id="site_content">
       <div id="sidebar_container">
@@ -46,8 +47,8 @@ preHTML = '''
                    </li>
                     <li id="finance" style="padding-bottom: 0px;"><a href="finance.html">Finance</a>
                         <ul style="margin: 0px;">
-                            <li id="tuition" style="margin-top: 5px;"><a href="tuition.html">Tuition Fees Payment</a></li>
                             <li id="lifestyle"><a href="lifestyle.html">Lifestyle</a></li>
+                            <li id="tuition" style="margin-top: 5px;"><a href="tuition.html">Tuition Fees Payment</a></li>
                         </ul>
                     </li>
                     <li id="faq"><a href="faq.html">FAQ</a></li>
@@ -115,8 +116,10 @@ class PreArrival(webapp.RequestHandler):
 class AirportPickup(webapp.RequestHandler):
     def get(self):
         self.response.headers['Content-Type'] = 'text/html'
+        markup = ''
+        markup = open('../assets/data/airportPickup.html', 'r').read()
         addJS = script % (('airport-pickup'))
-        html = preHTML % (('Airport Pickup', addJS))
+        html = preHTML % ((markup, addJS))
         self.response.out.write(html)
 
 class PostArrival(webapp.RequestHandler):
@@ -131,8 +134,10 @@ class PostArrival(webapp.RequestHandler):
 class Housing(webapp.RequestHandler):
     def get(self):
         self.response.headers['Content-Type'] = 'text/html'
+        markup = ''
+        markup = open('../assets/data/housing.html', 'r').read()
         addJS = script % (('housing'))
-        html = preHTML % (('Housing', addJS))
+        html = preHTML % ((markup, addJS))
         self.response.out.write(html)
 
 class CampusLife(webapp.RequestHandler):
@@ -192,29 +197,37 @@ class Music(webapp.RequestHandler):
 class Academics(webapp.RequestHandler):
     def get(self):
         self.response.headers['Content-Type'] = 'text/html'
+        markup = ''
+        markup = open('../assets/data/academics.html', 'r').read()
         addJS = script % (('academics'))
-        html = preHTML % (('Academics', addJS))
+        html = preHTML % ((markup, addJS))
         self.response.out.write(html)
 
 class Books(webapp.RequestHandler):
     def get(self):
         self.response.headers['Content-Type'] = 'text/html'
+        markup = ''
+        markup = open('../assets/data/books.html', 'r').read()
         addJS = script % (('books'))
-        html = preHTML % (('Books', addJS))
+        html = preHTML % ((markup, addJS))
         self.response.out.write(html)
 
 class Courses(webapp.RequestHandler):
     def get(self):
         self.response.headers['Content-Type'] = 'text/html'
+        markup = ''
+        markup = open('../assets/data/courses.html', 'r').read()
         addJS = script % (('courses'))
-        html = preHTML % (('Courses', addJS))
+        html = preHTML % ((markup, addJS))
         self.response.out.write(html)
 
 class Finance(webapp.RequestHandler):
     def get(self):
         self.response.headers['Content-Type'] = 'text/html'
+        markup = ''
+        markup = open('../assets/data/finance.html', 'r').read()
         addJS = script % (('finance'))
-        html = preHTML % (('Finance', addJS))
+        html = preHTML % ((markup, addJS))
         self.response.out.write(html)
 
 class Tuition(webapp.RequestHandler):
