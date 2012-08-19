@@ -6,5 +6,5 @@ Steps
 2) Extract the SDK and copy app.yaml and assets/ directory into it
 3) Launch the webserver by typing "./dev_appserver.py ." within the SDK directory. On doing so, you should be able to access the site at http://localhost:8080
 4) Make sure that you are added as a developer for unc-desi.appspot.com by emailing me at "ravikirn (at) cs.unc.edu" before you can push changes to the site. For developmental purposes, I would suggest creating a new appengine site and modify app.yaml file to get it working.
-5) To update the production site, you need to run "./appcfg.py --email=<YOUR_GMAIL_ID> update <APP_ENGINE_SDK_FOLDER>
+5) To update the production site, you need to run "./appcfg.py --email=<YOUR_GMAIL_ID> update <APP_ENGINE_SDK_FOLDER>"
 6) If you want to learn the details about App Engine (Python), take a look at the documentation at https://developers.google.com/appengine/docs/python/overview.
