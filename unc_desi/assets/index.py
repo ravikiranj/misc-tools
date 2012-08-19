@@ -7,17 +7,18 @@ preHTML = '''
 <!DOCTYPE HTML>
 <html>
 <head>
-  <title>UNC New International Grad Student Unofficial Guide</title>
-  <meta name="description" content="UNC New International Grad Student Unofficial Guide. This is mostly targeted at South Asian Students coming from India, Pakistan, Bangladesh, Afghanistan, Bhutan, Maldives, Nepal and Srilanka" />
-  <meta name="keywords" content="indian graduate student association unc, help indian grad student unc, unc indian, unc indian student" />
+  <title>UNC New Indian Grad Student Unofficial Guide</title>
+  <meta name="description" content="UNC New Indian Grad Student Unofficial Guide. This is mostly targeted at Indian Grad Students but might also hold good for Grad students coming from Pakistan, Bangladesh, Afghanistan, Bhutan, Maldives, Nepal and Srilanka" />
+  <meta name="keywords" content="indian graduate student association unc, help indian grad student unc, unc indian, unc indian student, unc indian grad student" />
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="google-site-verification" content="Kyp-Nlh6wPzr0tXZSqnzrfa_1c4uIzPtcD3ruOax2sI" />
   <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
 </head>
 <body>
   <div id="main">
     <header>
         <div id="logo"><img src="assets/images/logo_unc_main_png.png"/></div>
-        <h1 id="heading">UNC New International Grad Student Unofficial Guide</h1>
+        <h1 id="heading">UNC New Indian Grad Student Unofficial Guide</h1>
     </header>
     <div id="site_content">
       <div id="sidebar_container">
@@ -71,6 +72,18 @@ preHTML = '''
   <script type="text/javascript" src="assets/js/modernizr-1.5.min.js"></script>
   <!-- Custom JS -->
   %s 
+  <!-- Google Analytics Tracking -->
+  <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-31119754-2']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+  </script>
 </body>
 </html>
 '''
