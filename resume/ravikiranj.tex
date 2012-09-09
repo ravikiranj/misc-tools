@@ -1,56 +1,56 @@
 %% start of file `template.tex'.
-%% Copyright 2006-2011 Xavier Danaux (xdanaux@gmail.com).
+%% Copyright 2006-2012 Xavier Danaux (xdanaux@gmail.com).
 %
 % This work may be distributed and/or modified under the
 % conditions of the LaTeX Project Public License version 1.3c,
 % available at http://www.latex-project.org/lppl/.
 
 
-\documentclass[11pt,a4paper]{moderncv}
+\documentclass[11pt,a4paper,sans]{moderncv}   % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
 % moderncv themes
-\moderncvtheme[blue]{classic}                  % optional argument are 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
-%\moderncvtheme[green]{classic}               % idem
-
-% character encoding
-\usepackage[utf8]{inputenc}                   % replace by the encoding you are using
-%\usepackage{CJKutf8}                         % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+\moderncvstyle{classic}                        % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                          % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 
 % adjust the page margins
-\usepackage[scale=0.8]{geometry}
-%\setlength{\hintscolumnwidth}{3cm}           % if you want to change the width of the column with the dates
-%\setlength{\maketitlenamewidth}{10cm}}       % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
-
+\usepackage[scale=0.75]{geometry}
 
 % personal data
-\firstname{Ravikiran}
-\familyname{Janardhana}
-\address{1100 W NC HWY 54 BYP, APT 38B}{CHAPEL HILL NC-27516}    % optional, remove the line if not wanted
-\mobile{919-448-8740}                    % optional, remove the line if not wanted
-\email{ravikirn@cs.unc.edu}                      % optional, remove the line if not wanted
-%%\homepage{www.ravikiranj.net}                % optional, remove the line if not wanted
-%\photo[64pt]{ravikirn.jpg}                  % '64pt' is the height the picture and 'picture' is the name of the picture file; 
+\firstname{\textcolor{firstnameColor}{Ravikiran}}
+\familyname{\textcolor{familynameColor}{Janardhana}}
+%\title{Resumé title (optional)}               % optional, remove the line if not wanted
+\address{1100 W NC HWY 54 BYP, APT 38B}{CHAPEL HILL, NC 27516}    % optional, remove the line if not wanted
+\mobile{(919)-448-8740}                     % optional, remove the line if not wanted
+%\phone{+2~(345)~678~901}                      % optional, remove the line if not wanted
+\email{ravikirn@cs.unc.edu}                          % optional, remove the line if not wanted
+\homepage{www.ravikiranj.net}                    % optional, remove the line if not wanted
 
-%\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
 %----------------------------------------------------------------------------------
 %            content
 %----------------------------------------------------------------------------------
 \begin{document}
-%\begin{CJK*}{UTF8}{gbsn}                    % to typeset your resume in Chinese using CJK
-% format name size to adjust for long length and color
-\renewcommand*{\firstnamefont}{\fontsize{30}{26}\sffamily\mdseries\upshape}
-\renewcommand*{\familynamefont}{\firstnamefont}
-\definecolor{familynamecolor}{rgb}{0.65,0.65,0.65}
-\definecolor{firstnamecolor}{rgb}{0.45,0.45,0.45}
+%--- define colors ---%
+\definecolor{familynameColor}{rgb}{0.65,0.65,0.65}
+\definecolor{firstnameColor}{rgb}{0.45,0.45,0.45}
 
+%--- new commands ---%
+
+%-----       resume       ---------------------------------------------------------
 \maketitle
 \section{Industry Experience}
+\cventry{Summer 2012}{Software Developer Intern}{Microsoft Corporation}{Redmond}{}{
+\begin{itemize}
+\item{Developed and implemented an algorithm using AdaBoost (Adaptive Boosting) technique to detect multiple intents (or actions) in natural spoken language.} 
+\item{Improved the accuracy of detecting single intent user utterances by 1.40\%.} 
+\end{itemize}}
+
+\vspace{2mm}
+
 \cventry{2009--2011}{Software Engineer}{Yahoo! India}{Bangalore}{}{
 \begin{itemize}
-\item{Developed Facebook, Twitter and LinkedIn modules} 
-\item{Implemented front-end based instrumentation of My Yahoo! product in order to compute page-views, module-views and click through rates (\textit{CTR})}
-\item{Developed an instrumentation dashboard to showcase daily statistics of views and clicks utilizing Apache Hadoop and Pig for the backend to query the records (\textit{in the order of millions})}
-\item{Demonstrated the quality of a utility player by handling both the frontend as well as the backend tasks which included porting legacy code, improving existing modules and developing new modules}
+\item{Developed Facebook, Twitter and LinkedIn modules for My Yahoo! product.} 
+\item{Implemented front-end based instrumentation of My Yahoo! in order to compute page-views, module-views and click through rates (\textit{CTR}).}
+\item{Developed an instrumentation dashboard to showcase daily statistics of views (in the order of millions) and clicks utilizing Apache Hadoop and Pig as backend infrastructure.}
 \end{itemize}}
 
 \vspace{2mm}
@@ -58,36 +58,39 @@
 \section{Academic Experience}
 \cventry{2011--present}{Research Assistant}{University of North Carolina at Chapel Hill}{Chapel Hill}{}{
 \begin{itemize}
-\item{Worked on identifying fiber crossings in white matter of the brain under \textit{Dr. Martin Styner (styner@cs.unc.edu)}}
-\item{The main goal of my research is to find the fiber crossing landmarks and use it for registration of human brains}
-\item{In particular, this research work will help in registering Krabbe disease infected human brains to normal human brains which inturn helps in the treatment procedure}
+\item{Worked on identifying fiber crossing landmarks in white matter of human brain under \textit{Dr. Martin Styner (styner@cs.unc.edu)}.}
+\item{Developed a framework to register Krabbe disease infected infant brain to a normal brain. This procedure helps physicians to analyze the treatment efficiency.}
 \end{itemize}}
 
 \vspace{2mm}
 
-%\cventry{2007}{Teaching Assistant}{PES Institute of Technology}{Bangalore}{}{
-%\begin{itemize}
-%\item{Worked as teaching assistant in the course of \textit{Advanced Microprocessors}}
-%\item{Developed assembly programs in Microsoft Assembler (MASM) to demonstrate binary search, bubble sort, string operations and simple calculator and taught the same}
-%\end{itemize}}
-
 \section{Education}
-\cventry{2011--present}{MS.}{University of North Carolina at Chapel Hill}{Chapel Hill, NC}{}{Masters in Computer Science}
+\cventry{2011--present}{MS.}{University of North Carolina at Chapel Hill}{Chapel Hill, NC}{}{}
+\cvline{}{Masters in Computer Science}
 \cventry{2005--2009}{BE.}{Peoples Education Society Institute of Technology (PESIT)}{Bangalore, India}{Bachelor of Engineering in Computer Science}{Percentage: 88.40, \textbf{University Topper}}
 
 \vspace{2mm}
 
 \section{Computer skills}
-\cvline{Programming}{C/C++, PHP, Python, Java, Perl}
+\cvline{Programming}{C/C++, PHP, Python, Perl, Java}
 \cvline{Web}{HTML5, Javascript, CSS, YUI, jQuery}
 \cvline{Data Mining}{Pig, Hadoop}
-\cvline{Database}{MySQL, Oracle}
 \cvline{Platforms}{Linux, Web}
-\cvline{Concepts}{ Digital Image Processing, Computer Vision, Data Mining, Motion Planning for Robots, Operating Systems, Algorithms and Data Structures}
+\cvline{Concepts}{Image Processing, Computer Vision, Machine Learning, Data Mining}
 
 \vspace{2mm}
 
 \section{Academic Projects}
+
+\cventry{2012}{Twitter Sentiment Analyzer}{}{}{}{
+\begin{itemize}
+\item{Developed a tool to analyze the sentiment (\textit{positive, neutral, negative}) expressed in a user twitter status messages (See details at \url{www.ravikiranj.net}).}
+\item{Compared the accuracy of sentiment analysis using various machine learning algorithms namely Naive Bayes Classifier, Maximum Entropy Classifier and Support Vector Machines.}
+\end{itemize}
+}
+
+\vspace{1mm}
+
 \cventry{2011}{Roadmap-based Motion Planning in Dynamic Environments}{}{}{}{
 \begin{itemize}
 \item {Implemented a motion planning algorithm for a point robot to navigate in a dynamic environment consisting of both static and dynamic moving obstacles from start to goal}
@@ -96,14 +99,6 @@
 
 \vspace{1mm}
 
-\cventry{2011}{Identifying fiber crossing landmarks in the white matter of the brain}{}{}{}{
-\begin{itemize}
-\item {Designed and Implemented an algorithm to identify fiber crossing landmarks in the white matter using entropy, fiber segments per voxel and fiber orientation dispersion}
-\item {The input for the algorithm is a Diffusion Weighted MR Image (DWI) and the output is an image which highlights the fiber crossing landmarks}
-\end{itemize}
-}
-
-\vspace{1mm}
 
 \cventry{2009}{Track Me - A suite of innovative user interfaces}{}{}{}{
 \begin{itemize}
@@ -123,8 +118,8 @@
 \cventry{2008 -- 2009}{American Sign Language Interpreter}{}{}{}{
 \begin{itemize}
 \item {Developed a real-time interpreter of American Sign Language alphabets which converts hand gestures into text, which is further read out by a speech engine}
-\item {This project resulted in a research paper [1] which was presented at \textit{International MultiConference of Engineers and Computer Scientists 2009, Hong Kong}}
-\item {An extension of this work appeared as a book chapter [2] in \textit{Intelligent Automation and Computer Engineering}, Springer, 321-332, 2010}
+\item {This project resulted in a research paper which was presented at \textit{International MultiConference of Engineers and Computer Scientists 2009, Hong Kong}}
+\item {An extension of this work appeared as a book chapter in \textit{Intelligent Automation and Computer Engineering}, Springer, 321-332, 2010}
 \end{itemize}
 }
 
@@ -134,17 +129,10 @@
 \cventry{Jul 2009}{Certificate of Merit}{International MultiConference of Engineers and Computer Scientists 2009}{Hong Kong}{}{Awarded Certificate of Merit for the conference paper \textit{Finger Detection for Sign Language Recognition} presented at IMECS 2009, Hong Kong}
 
 \section{Interests}
+\cvline{GitHub URL}{\url{www.github.com/ravikiranj} (personal side projects)}
 \cvline{Software}{Linux and Open Source}
 \cvline{Web/Mobile}{HTML5, Android and iOS App Development}
 \cvline{Sports}{Football, Cricket, Basketball}
 \cvline{Entertainment}{Classical/Electric Guitar, Keyboard, Computer Games and Table Tennis}
 
-% Publications from a BibTeX file without multibib\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% for BibTeX numerical labels
-%\nocite{*}
-%\bibliographystyle{plain}
-%\bibliography{publications}                  % 'publications' is the name of a BibTeX file
-
-%\clearpage\end{CJK*}                        % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
 \end{document}
-
-%% end of file `template_en.tex'.
