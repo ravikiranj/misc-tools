@@ -64,15 +64,38 @@ preHTML = '''
       %s 
       </div>
     </div>
+    <!-- DISQUS HTML -->
+    <div id="disqus-comments">
+        <div id="disqus_thread"></div>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">Comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">Comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
     <footer>
+        <!-- So kind of you to look at this page source -->
+        <!-- Coded by Ravikiran Janardhana (@ravikiranj). I write technical articles at www.ravikiranj.net -->
     </footer>
   </div>
+
   <!-- javascript at the bottom for fast page loading -->
   <script type="text/javascript" src="assets/js/jquery-1.8.0.min.js"></script>
   <!-- modernizr enables HTML5 elements and feature detects -->
   <script type="text/javascript" src="assets/js/modernizr-1.5.min.js"></script>
   <!-- Custom JS -->
+  <!-- Don't edit below -->
   %s 
+  <!-- DISQUS Script -->
+  <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'uncdesi'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+  </script>
+
   <!-- Google Analytics Tracking -->
   <script type="text/javascript">
       var _gaq = _gaq || [];

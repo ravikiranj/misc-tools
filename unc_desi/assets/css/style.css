@@ -170,6 +170,7 @@ nav {
   width: 220px;
   padding: 14px 0 0;
   margin-right: 25px;
+  min-height: 615px;
 }
 
 .sidebar { 
@@ -232,7 +233,7 @@ header h1{
   padding: 15px;
   border-radius: 10px;
   -webkit-border-radius: 10px;
-  min-height: 635px;
+  min-height: 615px;
 }
   
 .content ul { 
@@ -456,4 +457,10 @@ ul.notelist > li{
 }
 #heading{
     padding-top: 20px;
+}
+#disqus-comments{
+    width: 930px;
+    margin: 0px auto 0 auto;
+    float: left;
+    margin-top: 40px;
 }
