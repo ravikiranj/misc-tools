@@ -18,7 +18,7 @@ preHTML = '''
 <body>
   <div id="main">
     <header>
-        <div id="logo"><img src="assets/images/logo_unc_main_png.png"/></div>
+        <!-- Removed the logo as we are not an officially recognized student body of UNC -->
         <h1 id="heading">UNC New Indian Grad Student Unofficial Guide</h1>
     </header>
     <div id="site_content">
