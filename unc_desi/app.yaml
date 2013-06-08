@@ -22,6 +22,9 @@ handlers:
 - url: /assets/images
   static_dir: assets/images
 
+- url: /assets/docs
+  static_dir: assets/docs
+
 libraries:
 - name: webapp2
   version: latest
