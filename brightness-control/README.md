@@ -3,5 +3,6 @@ Command line:
 
 Screenshot:
 
-![Brightness Control](https://raw.github.com/ravikiranj/misc-tools/blob/master/brightness-control/screenshot.png)
+![Brightness Control](https://raw.github.com/ravikiranj/misc-tools/master/brightness-control/screenshot.png)
+                      
 
