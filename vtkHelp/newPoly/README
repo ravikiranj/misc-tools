@@ -1,4 +1,0 @@
-1) To compile the files, run make at /playpen/spharm-pdm/bin/spharmpdm-build
-
-2) To Test the new Files, run ParaToSPHARMMeshCLP in hippotest directory
-ParaToSPHARMMeshCLP /playpen/hippotest/output/Mesh/SPHARM/groupA_01_hippo_pp_para.vtk /playpen/hippotest/output/Mesh/SPHARM/groupA_01_hippo_pp_surf.vtk /playpen/hippotest/output/Mesh/SPHARM/groupA_01_hippo_pp_surf --regTemplateFileOn --regTemplate /playpen/hippotest/output/Template/groupA_01_hippo_pp_surfSPHARM.vtk --flipTemplateOn --flipTemplate /playpen/hippotest/output/Template/groupA_01_hippo_pp_surfSPHARM.coef --subdivLevel 10 --spharmDegree 15 --thetaIteration 100 --phiIteration 100 --medialMesh --FinalFlip 0 --paraOut
