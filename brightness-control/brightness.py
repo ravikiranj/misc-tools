@@ -26,6 +26,12 @@ class BrightnessScale:
         window.add(self.scale)
         window.show_all()
         
+        #Close on Escape
+        accGroup = Gtk.AccelGroup()
+        key, modifier = Gtk.accelerator_parse('Escape')
+        accGroup.connect(key, modifier, Gtk.AccelFlags.VISIBLE, Gtk.main_quit)
+        window.add_accel_group(accGroup)
+        
     def showErrDialog(self):
         self.errDialog = Gtk.MessageDialog(None, 
                                            Gtk.DialogFlags.MODAL,
