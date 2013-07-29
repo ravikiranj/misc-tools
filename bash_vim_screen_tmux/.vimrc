@@ -1,12 +1,35 @@
-" use filetype on
+" ====== vundle config begin ======
+" git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+" required for vundle
+filetype off
+
+" vundle config
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" vundle bundles
+" original repos on github
+" NERDTree
+Bundle 'scrooloose/nerdtree'
+" Surround
+Bundle 'tpope/vim-surround' 
+" snipmate
+Bundle 'msanders/snipmate.vim'
+" sparkup
+Bundle 'rstacruz/sparkup'
+
+" use filetype on - required for vundle
 filetype plugin indent on
+
+" ====== vundle config end ======
+
 " use syntax on
 syntax on
 " show possible command suggestions
 set showcmd
-" use vim defaults
+" use vim defaults - required for vundle
 set nocompatible
-" allways show status line
+" always show status line
 set ls=2
 " numbers of spaces of tab character
 set tabstop=4
@@ -58,19 +81,27 @@ set nocindent
 set pastetoggle=<F2>
 " show mode
 set showmode
-" set mode to xterm (helps with screen)
-set term=xterm-256color
 " set colorscheme
-colorscheme ir_black
+colorscheme desert
 
-" map K to split lines
-:nnoremap K i<CR><Esc>
 " press F4 to toggle highlighting on/off.
 :noremap <F4> :noh<CR>
 " press F2 to save a file opened in RO mode
 :noremap <F2> :w ! sudo tee %<CR>
 " press Ctrl+Left , Ctrl+Right to switch tabs
 nnoremap <F3> :set invpaste paste?<CR>
+
 " switching between tabs
 :map <C-Left> :tabp<CR>
 :map <C-Right> :tabn<CR>
+
+" NerdTree
+map <silent> <C-n> :NERDTreeToggle<CR>
+
+" XML Pretty format
+au FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
+
+" FileType Specific
+autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
+autocmd Filetype css setlocal ts=2 sts=2 sw=2
+autocmd Filetype velocity setlocal ts=2 sts=2 sw=2
