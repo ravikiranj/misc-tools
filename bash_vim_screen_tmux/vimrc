@@ -17,6 +17,8 @@ Bundle 'tpope/vim-surround'
 Bundle 'msanders/snipmate.vim'
 " sparkup
 Bundle 'rstacruz/sparkup'
+" auto-pairs
+Bundle 'vim-scripts/Auto-Pairs'
 
 " use filetype on - required for vundle
 filetype plugin indent on
