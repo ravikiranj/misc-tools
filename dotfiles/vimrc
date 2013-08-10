@@ -90,10 +90,10 @@ colorscheme desert
 :noremap <F4> :noh<CR>
 " press F2 to save a file opened in RO mode
 :noremap <F2> :w ! sudo tee %<CR>
-" press Ctrl+Left , Ctrl+Right to switch tabs
+" <F3> for raw paste
 nnoremap <F3> :set invpaste paste?<CR>
 
-" switching between tabs
+" press Ctrl+Left , Ctrl+Right to switch tabs
 :map <C-Left> :tabp<CR>
 :map <C-Right> :tabn<CR>
 
@@ -102,8 +102,3 @@ map <silent> <C-n> :NERDTreeToggle<CR>
 
 " XML Pretty format
 au FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
-
-" FileType Specific
-autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
-autocmd Filetype css setlocal ts=2 sts=2 sw=2
-autocmd Filetype velocity setlocal ts=2 sts=2 sw=2
