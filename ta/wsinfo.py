@@ -8,7 +8,11 @@ from termcolor import colored
 # Boston current weather
 data = {}
 # Boston WOEID = 2367105
-data['q'] = "select item.condition.temp,item.condition.text from weather.forecast where woeid=2367105"
+# Mountain View WOEID = 12797128
+# Palo Alto WOEID = 2467861
+city = "Palo Alto"
+woeid = "2467861"
+data['q'] = "select item.condition.temp,item.condition.text from weather.forecast where woeid=" + woeid
 data['format'] = "json"
 wQueryParams = urllib.urlencode(data)
 baseUrl = "http://query.yahooapis.com/v1/public/yql"
@@ -24,10 +28,10 @@ try:
             temp = int(res['temp'])
             temp = (int(temp) - 32) * (5.0/9.0)
             text = res['text']
-            print "Boston, %d°C, %s" % (temp, text)
+            print "%s, %d°C, %s" % (city, temp, text)
         else:
            print "Failed to fetch weather data" 
-           print "Check http://weather.yahoo.com/united-states/massachusetts/boston-2367105/ for details"
+           print "Check http://weather.yahoo.com/ for details"
 except urllib2.URLError as e:
     print "Failed to fetch Weather data"
     print "Error Code = %d, Message = %s" % (e.code, e.reason)
